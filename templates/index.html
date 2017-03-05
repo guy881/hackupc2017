@@ -18,8 +18,10 @@
     <link href="css/landing-page.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -33,20 +35,22 @@
 
 <body style="background:url('img/back1.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse"
+                 id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#about">About</a>
@@ -62,73 +66,86 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
-    </nav>
+    </div>
+</nav>
 
 
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
+<!-- Header -->
+<a name="about"></a>
+<div class="intro-header">
+    <div class="container">
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <div style="font-size: 180px">NeuNAME</div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message">
+                    <div style="font-size: 180px">NeuNAME</div>
 
+                    {% if message is none %}
+                        <div>
+                            <p></p>
 
-                            <div>
-                                <p></p>
-
-                                <form method="post" enctype="multipart/form-data" id="form">
+                            <form method="post" enctype="multipart/form-data"
+                                  id="form">
                                 <label for="photo" id="label">
 
-                                    <input type="file" name="photo" id="input">
+                                    <input type="file" name="photo"
+                                           class="btn-default">
 
                                 </label>
 
-                                <input type="submit" value="Send" id="sendBtn">
-                                </form>
-                            </div>
+                                <input type="submit" value="Send"
+                                       class="btn-default">
+                            </form>
+                        </div>
+                    {% endif %}
+                    {% if message is not none %}
+                        <div id="message">
+                            {{ message }}
+                        </div>
+                    {% endif %}
 
 
+                    <hr class="intro-divider">
 
+                    <ul class="list-inline intro-social-buttons">
+                        <li>
+                            <a href="#" class="btn btn-default btn-lg"><i
+                                    class="fa fa-android fa-fw"></i> <span
+                                    class="network-name">Android</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-default btn-lg"><i
+                                    class="fa fa-apple fa-fw"></i> <span
+                                    class="network-name">iOS</span></a>
+                        </li>
 
-                        <hr class="intro-divider">
-
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-android fa-fw"></i> <span class="network-name">Android</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-apple fa-fw"></i> <span class="network-name">iOS</span></a>
-                            </li>
-                            
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
             </div>
-
         </div>
-        <!-- /.container -->
+
+    </div>
+    <!-- /.container -->
 </div>
 
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            
-            <p class="copyright text-muted small">Copyright &copy; MLB 2016. All Rights Reserved</p>
-            
-        </div>
-    </footer>
+<!-- Footer -->
+<footer>
+    <div class="container">
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+        <p class="copyright text-muted small">Copyright &copy; MLB 2016. All
+            Rights Reserved</p>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    </div>
+</footer>
 
-    <script src="js/script.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/script.js"></script>
 
 
 </body>
